@@ -1,0 +1,58 @@
+<div class="container">	
+    <div>
+        <span>
+            <div class="pull-left small-margin-right" style="width:800px;height:130px;">
+                <p class="text-justify text-black">Créateur du piscine depuis plus de 15 ans, WIT Piscine réalise de nombreux projets en. Présent dans toute la France et à l'étranger grâce à un réseau d'artisans qualifiés et des showrooms,WIT Piscine propose un accompagnement technique et des conseils adaptés à chaque projet pour la définition des matières et couleurs. 
+                Nos projets sont garantis en décenale.
+                Créateur du piscine depuis plus de 15 ans, WIT Piscine réalise de nombreux projets en. Présent dans toute la France et à l'étranger grâce à un réseau d'artisans qualifiés et des showrooms,WIT Piscine propose un accompagnement technique et des conseils adaptés à chaque projet pour la définition des matières et couleurs. 
+                Nos projets sont garantis en décenale</p>
+            </div>
+            <span>
+                <i class="fa fa-pie-chart fa-2x"></i><a href="">
+                <span class="text-black taille-texte"> Architectes, Designer</span>
+                </a>
+            </span><br>
+            <span>
+                <i class="fa fa-map-marker fa-2x"></i>
+                <span class="text-black taille-texte"> <b>Ville </b>: 680 allee du limousin ECOPARC <br>
+                    <span>Rovaltain nord</span><br>
+                    <span>26300 Chateauneuf sur isere</span>
+                </span>
+            </span>
+        </span>
+    </div><br>
+    <!-- DIV LISTE ARTICLES -->
+    <div class="text-center" ng-controller="profilCtrl">
+        <div class="row" >      
+
+            <div ng-repeat="article in articles | filter:query | limitTo:6">    
+                <div class="hide">
+                    {{uneURLImage = imgResize(article.sm_image_url[0])}}
+                    {{grandeImage = clicImage(article.sm_image_url[0])}}
+                </div>      
+                <div class="col-lg-4">
+                    <div class="taille-article-photos taille-article-media">
+                        <div class="photos zoom" style="height:220px; width:300px">  
+
+                            <a class="test" rel="group" href="{{grandeImage}}" title="{{article.label}}">
+                            <!--<div ng-swipe-left="imageSuivante(image)" ng-swipe-right="imagePrecedente(image)">-->
+                                <img  class="img-responsive center-block taille-photos img-home" ng-src="{{uneURLImage}}" alt="{{article.label}}"
+                                title="{{article.label}}"/>
+                            <!--</div>-->
+                            </a>
+                            <div class="highlight">
+                                <p class="text-black texte-photos titre-photos texte-VE"><span>{{article.label}}</span></p>
+                            </div>
+                        </div>
+                    </div>  
+     
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#/profilPro/photoProjet" class="pull-right"  
+    ng-click="resetActive('mpp_photo','/profilPro/photoProjet')">Voir toutes les photos 
+        <i class="fa fa-caret-right "></i>
+    </a>
+
+</div>

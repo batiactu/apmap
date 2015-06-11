@@ -1,0 +1,27 @@
+<a href="#" class="btn btn-primary"><i class="fa fa-arrow-left"></i> Retour à la recherche</a>
+
+<div> 
+  <h1 style="margin-top:20px;" class="text-primary text-center well"><b>{{article.label}}</b></h1>
+    <div class="text-primary">
+      <ul class="list-group">
+        <li class="list-group-item text-justify taille-teaser">
+          <p ng-controller="articlesCtrl" ng-if="article.ss_indus"><b>Par : </b><a href="#" ng-click="sortByFabricant(article.ss_indus)">
+            <span class="text-black">{{article.ss_indus}}</span></a>
+          </p>
+          <img class="img-responsive center-block float-left xs-margin-right" 
+          ng-src="{{article.sm_image_url[0]}}"/>
+          <b>Description : </b>
+          <p ng-bind-html="article.teaser | replaceCharacter" class="text-black">{{article.teaser}}
+          </p><br><br>
+        </li>
+
+        <li class="list-group-item">
+          <p><b>Référence : </b><span class="text-black">{{config.trad[article.entity_type]}}</span></p>
+          <p ng-if="article.timestamp"><b>Date de publication : </b><span class="text-black">{{article.timestamp.substr(8,2)}}/{{article.timestamp.substr(5,2)}}/{{article.timestamp.substr(0,4)}}</span></p>
+        </li>       
+      </ul>
+    </div>
+</div>
+
+
+

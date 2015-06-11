@@ -1,0 +1,36 @@
+<div class=" identification-media">
+<carousel>
+    <slide ng-repeat="slide in slides" active="slide.active">
+        <img class="brightness" ng-src="{{slide.image}}" style="height:540px;width:100%;">
+        <div class="carousel-caption">
+            <h3>
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x" style="opacity:0.5;"></i>
+                    <i class="fa {{slide.icon}} fa-stack-1x fa-inverse"></i>
+                </span>
+            </h3>
+            <div>
+                <h4>
+                    <span class="text-identification text-identification-media text-white">
+                        {{slide.title}}
+                    </span>
+                </h4>
+                <h6> 
+                    <span class="text-identification text-identification-media text-white">
+                        {{slide.text}}
+                    </span>
+                </h6>
+            </div>
+        <!-- Div des boutons d'inscription et d'identification -->
+        <div class="middle-margin-top middle-margin-top-media text-center">
+            <a href="#/inscription">
+                <button class="btn btn-primary width-button-identification ">S'inscrire</button>
+            </a><br><br>
+            <a href="#/connexion">
+                <button class="btn btn-success width-button-identification">Se connecter</button>
+            </a>
+        </div>
+    </div>
+  </slide>
+</carousel>
+</div>

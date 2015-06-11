@@ -1,0 +1,35 @@
+<div class="container">	
+
+    <!-- DIV LISTE ARTICLES -->
+    <h2 class="text-black"> XXX Projets/Photos touvez celui qui vous intéresse </h2>
+    <div class="text-center" ng-controller="profilCtrl">
+        <div class="row" >      
+
+            <div ng-repeat="article in articles | filter:query">    
+                <div class="hide">
+                    {{uneURLImage = imgResize(article.sm_image_url[0])}}
+                    {{grandeImage = clicImage(article.sm_image_url[0])}}
+                </div>
+                <div class="col-lg-4">
+                    <div class="taille-article-photos taille-article-media">
+                        <div class="photos zoom" style="height:220px; width:300px">  
+
+                            <a class="test" rel="group" href="{{grandeImage}}" title="{{article.label}}">
+                            <!--<div ng-swipe-left="imageSuivante(image)" ng-swipe-right="imagePrecedente(image)">-->
+                                <img  class="img-responsive center-block taille-photos img-home" ng-src="{{uneURLImage}}" alt="{{article.label}}"
+                                title="{{article.label}}"/>
+                            <!--</div>-->
+                            </a>
+                            <div class="highlight">
+                                <p class="text-black texte-photos titre-photos texte-VE">
+                                    <span>{{article.label}}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

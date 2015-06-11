@@ -1,0 +1,66 @@
+<div class="container"  ng-controller="profilProCtrl">	
+	<div style="background-image:url('http://www.cafeduweb.com/images/bandeaux/www/487379_79798671.jpg');width:100%;height:250px;background-repeat:no-repeat;margin-top:-40px">
+		<span class="pull-right" style="">
+		    <a href="https://www.facebook.com/maisonapart" class="btn btn-social-icon btn-lg btn-facebook btn-social-pro tiny-margin-top" target="_blank">
+		        <i class="fa fa-facebook"></i>
+		    </a>
+		    <a class="btn btn-social-icon btn-lg btn-twitter btn-social-pro tiny-margin-top"
+		    href="https://twitter.com/maison_apart" target="_blank" >
+		        <i class="fa fa-twitter"></i>
+		    </a>
+		    <a href="https://plus.google.com/+Maisonapart/posts" class="btn btn-social-icon btn-lg btn-google btn-social-pro tiny-margin-top" target="_blank"><i class="fa fa-google"></i></a>
+		</span><br><br><br>
+
+		<div class="big-margin-top">
+			<div>
+				<img src="http://www.guide-piscine.fr/medias/image/logo_WWP_wit_piscine-11327-600-600-F.jpg" class=" img-responsive img-rounded" alt="logoPro"
+				style="width:139px;height:139px;margin-left:15px;">
+			</div>
+			<h2 class="text-white" style="margin-top:-135px;margin-left:165px;">WIT PISCINE</h2>
+			<span style="margin-left:166px;">
+				<i class="fa fa-star text-white"></i><i class="fa fa-star text-white"></i><i class="fa fa-star text-white"></i><i class="fa fa-star text-white"></i><i class="fa fa-star text-white"></i>
+				<p class="text-white taille-teaser" style="margin-top:-23px;margin-left:250px;">4 Avis | Donnez le votre</p>
+			</span>
+		</div>
+        <a href="#/trouverPro">
+            <button type="button" class="btn couleur-noire btn-sm text-white" 
+            style="margin-top:65px;margin-bottom:50px;">Retour à la liste des pros
+            </button>
+        </a>
+	</div>
+
+    <div class="container" style="margin-top:-27px; margin-bottom: 30px;margin-left:190px;">
+        <div class="row">
+            <div id="row_step" class="row step">
+                <div id="mpp_ve" class="col-md-2" ng-click="resetActive('mpp_ve','/profilPro/vueEnsemble')">
+                    <span class="fa fa-home"></span>
+                    <p>Vue d'ensemble</p>
+                </div>
+                <div id="mpp_photo" class="col-md-2" ng-click="resetActive('mpp_photo','/profilPro/photoProjet')">
+                    <span class="fa fa-picture-o"></span>
+                    <p>Photos de projet</p>
+                </div>
+                <div id="mpp_secteurs" class="col-md-2" ng-click="resetActive('mpp_secteurs')">
+                    <span class="fa fa-server"></span>
+                    <p>Services proposés</p>
+                </div>
+                <div class="col-md-2 telEtWeb tel">
+                    <span class="fa fa-phone"></span>
+                    <p>01 02 03 04 05</p>
+                </div>
+                <div class="col-md-2 telEtWeb">
+                    <span class="fa fa-globe"></span>
+                    <p>Site Web</p>
+                </div>
+            </div>
+        </div>
+    </div><br>
+
+    <div ng-if="location.path() == '/profilPro/vueEnsemble' || location.path() == '/profilPro'">
+        <div ng-include="'views/vueEnsemble.html'"></div>
+    </div> 
+    <div ng-if="location.path() == '/profilPro/photoProjet'">
+        <div ng-include="'views/photoProjet.html'"></div>
+    </div> 
+</div>
+

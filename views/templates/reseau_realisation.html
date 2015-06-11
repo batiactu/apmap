@@ -1,0 +1,55 @@
+<!-- Permet de faire appel à la fonction qui redimensionne l'image -->
+<div class="hide">
+ {{uneURLImage = imgResize(article.sm_image_url[0])}}
+ {{grandeImage = clicImage(article.sm_image_url[0])}}
+</div>
+
+
+<a class="btn btn-primary" ng-click="retourRecherche(filter.entity_type)">
+  <i class="fa fa-arrow-left"></i> Retour à la recherche</a>
+
+
+<div> 
+  <h1 class="text-primary text-center well titre-profil-article"><b>{{article.label}}</b></h1>
+    <div class="text-primary">
+      <ul class="list-group">
+        <li class="list-group-item taille-teaser" ng-if="article.sm_createurs[0]">
+          <p class="text-center"><b>Créateur : </b><span class="text-black">{{article.sm_createurs[0]}}</span></p>
+          <a class="test" rel="group" href="{{grandeImage}}" title="{{article.ts_title}}">
+            <img class="img-responsive center-block" ng-src="{{uneURLImage}}"
+            alt="{{article.ts_title}}" title="{{article.ts_title}}"/>
+          </a>
+        </li>
+
+        <li class="list-group-item text-justify taille-teaser"><b>Présentation : </b><br>
+          <p ng-bind-html="article.ts_texte | replaceCharacter" class="text-black">{{article.ts_texte}}</p>
+        </li>
+
+        <li class="list-group-item">
+          <p><b>Référence : </b><span class="text-black">{{config.trad[article.entity_type]}}</span></p>
+          <p ng-if="article.ss_type_real"><b>Type de réalisation : </b><a href="#" ng-controller="articlesCtrl" ng-click="sortByType_real(article.ss_type_real)">
+            {{article.ss_type_real |traduction}}</a>
+          </p>
+          <p ng-if="article.ss_type_travaux"><b>Type de travaux : </b><a href="#" ng-controller="articlesCtrl" ng-click="sortByType_travaux(article.ss_type_travaux)">
+            {{article.ss_type_travaux |traduction}}</a>
+          </p>
+          <p ng-if="article.sm_ville[0]"><b>Lieu : </b>
+            <span class="text-black">{{article.sm_ville[0]}}</span>
+          </p>
+          <p ng-if="article.timestamp"><b>Date de publication : </b>
+            <span class="text-black">{{article.timestamp.substr(8,2)}}/{{article.timestamp.substr(5,2)}}/{{article.timestamp.substr(0,4)}}</span>
+          </p>
+        </li>
+
+        <li class="list-group-item" ng-if="article.sm_tags">
+          <p><b> Principaux matériaux, équipements ou solutions techniques utilisés pour cette réalisation : </b>
+            <span ng-repeat="tag in article.sm_tags"> <span class="label label-default">{{tag}}</span> </span>
+          </p>
+        </li>       
+      </ul>
+    </div>
+</div>
+
+
+
+

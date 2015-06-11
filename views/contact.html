@@ -1,0 +1,30 @@
+
+<h1 class="text-center small-margin-bot">Contact</h1>
+
+
+<form>
+  <div class="form-group">
+    <label for="mail" class="text-black">Votre adresse mail :</label>
+    <input type="email" class="form-control" id="mail" placeholder="Email">
+  </div><br>
+  <div class="form-group">
+    <label for="mdp" class="text-black">Mot de passe :</label>
+    <input type="password" class="form-control" id="mdp" placeholder="Password">
+  </div><br>
+  <div class="form-group xs-margin-bot">
+  	  <label for="message" class="text-black">Message :</label>
+      <textarea class="form-control" rows="3" width="100%" id="message" height="100%"></textarea>
+  </div>
+
+  <a href="mailto:rom.gorce@gmail.com"><button type="button" class="btn btn-primary">Envoyer</button>
+  <a href="#/"><button type="button" class="btn btn-danger">Annuler</button></a>
+
+</form>
+
+  <div id="pubArticles"  class="text-center ">
+      <div class="text-center" ng-controller="pubsCtrl">
+          <a href="{{pubs[8].clic}}" target="_blank">
+              <img ng-src="{{pubs[8].fichier}}" class="pub pub-media taille-pub-media">
+          </a>
+      </div>
+  </div>

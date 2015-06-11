@@ -1,0 +1,42 @@
+<!-- Permet de faire appel à la fonction qui redimensionne l'image -->
+<div class="hide">
+ {{uneURLImage = imgResize(article.sm_image_url[0])}}
+</div>
+
+
+<!-- Si a filtré sur 'réseau_réalisation' alors on affiche ce thème -->
+
+
+<a href="#" class="btn btn-primary"><i class="fa fa-arrow-left"></i> Retour à la recherche</a>
+
+<div> 
+  <h1 style="margin-top:20px;" class="text-primary text-center well"><b>{{article.label}}</b></h1>
+    <div class="text-primary">
+      <ul class="list-group">
+        <li class="list-group-item taille-teaser" ng-if="article.sm_createurs[0] || article.sm_image_url[0]">
+          <img class="img-responsive float-left xs-margin-right" ng-src="{{article.sm_image_url[0]}}"/>
+          <p><b>Créateur : </b><span class="text-black">{{article.sm_createurs[0]}}</span></p>  <br><br>    
+        </li>
+
+        <li class="list-group-item text-justify taille-teaser" ng-if="article.ts_texte"><b>Description : </b><br>
+          <p ng-bind-html="article.ts_texte | replaceCharacter" class="text-black">{{article.ts_texte}}</p>
+        </li>
+
+        <li class="list-group-item">
+          <p ng-if="article.ss_discussions_url">
+            <b>Paticiper aux discussions : </b>
+            <a href="{{article.ss_discussions_url}}" target="_blank">
+              <i class="fa fa-users text-black fa-2x"></i>
+            </a>
+          </p>
+          <p ng-if="article.is_num_membres"><b>Nombre de membres : </b><span class="text-black">{{article.is_num_membres}} / <a href="{{article.ss_membres_url}}" target="_blank">Voir les membres</a></span></p>
+          <p ng-if="article.ss_categorie"><b>Catégorie : </b><span class="text-black">{{article.ss_categorie}} / <a href="{{article.ss_categorie_url}}" target="_blank">Voir les Catégories</a></span></p>
+          <p><b>Référence : </b><span class="text-black">{{config.trad[article.entity_type]}}</span></p>
+          <p ng-if="article.timestamp"><b>Date : </b><span class="text-black">{{article.timestamp.substr(8,2)}}/{{article.timestamp.substr(5,2)}}/{{article.timestamp.substr(0,4)}}</span></p>
+        </li>   
+      </ul>
+    </div>
+</div>
+
+
+

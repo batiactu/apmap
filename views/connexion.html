@@ -1,0 +1,32 @@
+<div ng-controller="identificationCtrl" class="connexion-media big-margin-top-inverse">
+	<carousel>
+	    <slide ng-repeat="connect in connexion" active="connect.active">
+	        <img class="brightness big-margin-top" style="width:100%;height:100%;" ng-src="{{connect.image}}">
+	        <div class="carousel-caption">
+	        	<form class="form-horizontal text-center brightness-inverse form-connexion-media">
+	        		<!-- Adresse mail -->
+	        		<div class="form-group">
+	        			<div class="col-lg-12">
+	        				<label for="mail">Adresse Mail : </label>
+	        				<input type="email" class="form-control" id="mail" placeholder="Email">
+	        	  		</div>
+	        		</div><br>
+	        		<!-- Mot de passe -->
+	        		<div class="form-group">
+	        	  		<div class="col-lg-12">
+	        	  			<label for="mdp">Mot de passe : </label>
+	        	    		<input type="password" class="form-control" id="mdp" placeholder="Mot de passe">
+	        	    	</div>
+	        	    </div><br>
+	        	    <a href="">
+	        	    	<button class="btn btn-primary width-button-identification width-button-identification-media">Se connecter</button>
+	        	    </a><br><br>
+	        	    <div>
+	        	    	<a href="http://reseau.batiactu.com/accueil?identification=1&returnTo=accueil#mdp"><p class="pull-left">Mot de passe oublié?</p></a>
+	        	    	<a href="#/inscription"><p class="pull-right">S'inscrire</p></a>
+	        	    </div>
+	        	</form>
+	    	</div>
+	  	</slide>
+	</carousel>
+</div>
