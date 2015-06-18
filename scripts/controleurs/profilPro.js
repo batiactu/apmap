@@ -7,8 +7,6 @@ app.controller('profilProCtrl', function ($scope, $location, ArticleFactory) {
 
     $scope.resetActive = function(id, url) {
 
-
-        console.log(id);
         $("#row_step div").each(function () {
             if ($(this).hasClass("activestep")) {
                 $(this).removeClass("activestep");
@@ -34,6 +32,9 @@ app.controller('profilProCtrl', function ($scope, $location, ArticleFactory) {
     }
      if($location.path() == '/profilPro/photoProjet') {
         $scope.resetActive('mpp_photo');
+    }
+     if($location.path() == '/profilPro/servicesPro') {
+        $scope.resetActive('mpp_secteurs');
     }
 
         //Retourne les articles

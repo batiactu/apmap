@@ -314,10 +314,10 @@
 
 
 		<!-- DIV LISTE ARTICLES -->
-		<div class="text-center">
+		<div class="text-center" resizable>
 			<div class="row" >			
 				<div ng-repeat="article in articles | filter:query">			
-				 	<div class="col-lg-4">
+				 	<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
 						<div class="panel panel-default well taille-article taille-article-media">	
 							<div class="taille-fixe-media">	
 
@@ -350,56 +350,105 @@
 						</div>	                
 		            </div>
 
-		            <!-- Div des pubs au milieu des articles -->
-		            <div id="pubArticles" ng-if="$index==1" class="hauteur-fixe-pub col-lg-4">
-		                <div class="text-center" ng-controller="pubsCtrl">
-		                    <a href="{{pubs[5].clic}}" target="_blank">
-		                        <img ng-src="{{pubs[5].fichier}}" class="pub taille-pub">
-		                    </a>
-		                </div>
-		            </div>
-		            <div id="pubArticles" ng-if="$index==6" class="hauteur-fixe-pub col-lg-4">
-		                <div class="text-center" ng-controller="pubsCtrl">
-		                    <a href="{{pubs[9].clic}}" target="_blank">
-		                        <img ng-src="{{pubs[9].fichier}}" class="pub taille-pub">
-		                    </a>
-		                </div>
-		            </div>
-		            <div id="pubArticles" ng-if="$index==11" class="hauteur-fixe-pub col-lg-4">
-		                <div class="text-center" ng-controller="pubsCtrl">
-		                    <a href="{{pubs[6].clic}}" target="_blank">
-		                        <img ng-src="{{pubs[6].fichier}}" class="pub taille-pub">
-		                    </a>
-		                </div>
-		            </div>
-		            <div id="pubArticles" ng-if="$index==16" class="hauteur-fixe-pub col-lg-4">
-		                <div class="text-center" ng-controller="pubsCtrl">
-		                    <a href="{{pubs[8].clic}}" target="_blank">
-		                        <img ng-src="{{pubs[8].fichier}}" class="pub taille-pub">
-		                    </a>
-		                </div>
-		            </div>
-		            <div id="pubArticles" ng-if="$index==21" class="hauteur-fixe-pub col-lg-4">
-		                <div class="text-center" ng-controller="pubsCtrl">
-		                    <a href="{{pubs[6].clic}}" target="_blank">
-		                        <img ng-src="{{pubs[6].fichier}}" class="pub taille-pub">
-		                    </a>
-		                </div>
-		            </div>
-		            <div id="pubArticles" ng-if="$index==26" class="hauteur-fixe-pub col-lg-4">
-		                <div class="text-center" ng-controller="pubsCtrl">
-		                    <a href="{{pubs[3].clic}}" target="_blank">
-		                        <img ng-src="{{pubs[3].fichier}}" class="pub taille-pub">
-		                    </a>
-		                </div>
-		            </div>
-		            <!-- / Div des pubs au milieu des articles -->
+    		            <!-- Div des pubs au milieu des articles en résolution >= 1200px -->
+                        <div ng-if="largeur >= 1200">
+        		            <div id="pubArticles" ng-if="$index==1" ng-show="largeur >= 1200" class="hauteur-fixe-pub col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        		                <div class="text-center" ng-controller="pubsCtrl">
+        		                    <a href="{{pubs[5].clic}}" target="_blank">
+        		                        <img ng-src="{{pubs[5].fichier}}" class="pub taille-pub">
+        		                    </a>
+        		                </div>
+        		            </div>
+        		            <div id="pubArticles2" ng-if="$index==6" ng-show="largeur >= 1200" class="hauteur-fixe-pub col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        		                <div class="text-center" ng-controller="pubsCtrl">
+        		                    <a href="{{pubs[9].clic}}" target="_blank">
+        		                        <img ng-src="{{pubs[9].fichier}}" class="pub taille-pub">
+        		                    </a>
+        		                </div>
+        		            </div>
+        		            <div id="pubArticles3" ng-if="$index==11" ng-show="largeur >= 1200" class="hauteur-fixe-pub col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        		                <div class="text-center" ng-controller="pubsCtrl">
+        		                    <a href="{{pubs[6].clic}}" target="_blank">
+        		                        <img ng-src="{{pubs[6].fichier}}" class="pub taille-pub">
+        		                    </a>
+        		                </div>
+        		            </div>
+        		            <div id="pubArticles4" ng-if="$index==16" ng-show="largeur >= 1200" class="hauteur-fixe-pub col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        		                <div class="text-center" ng-controller="pubsCtrl">
+        		                    <a href="{{pubs[8].clic}}" target="_blank">
+        		                        <img ng-src="{{pubs[8].fichier}}" class="pub taille-pub">
+        		                    </a>
+        		                </div>
+        		            </div>
+        		            <div id="pubArticles5" ng-if="$index==21" ng-show="largeur >= 1200" class="hauteur-fixe-pub col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        		                <div class="text-center" ng-controller="pubsCtrl">
+        		                    <a href="{{pubs[6].clic}}" target="_blank">
+        		                        <img ng-src="{{pubs[6].fichier}}" class="pub taille-pub">
+        		                    </a>
+        		                </div>
+        		            </div>
+        		            <div id="pubArticles6" ng-if="$index==26" ng-show="largeur >= 1200" class="hauteur-fixe-pub col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        		                <div class="text-center" ng-controller="pubsCtrl">
+        		                    <a href="{{pubs[3].clic}}" target="_blank">
+        		                        <img ng-src="{{pubs[3].fichier}}" class="pub taille-pub">
+        		                    </a>
+        		                </div>
+        		            </div>
+                        </div>
+    		            <!-- / Div des pubs au milieu des articles en résolution >= 1200px -->
+
+                        <!-- Div des pubs au milieu des articles en résolution >= 768px et < 1200px -->
+                        <div ng-if="largeur < 1200 && largeur >= 768">
+                            <div id="pubArticles7" ng-if="$index==2" ng-show="largeur < 1200 && largeur >= 768" class="hauteur-fixe-pub col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="text-center" ng-controller="pubsCtrl">
+                                    <a href="{{pubs[9].clic}}" target="_blank">
+                                        <img ng-src="{{pubs[9].fichier}}" class="pub taille-pub">
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="pubArticles8" ng-if="$index==7" ng-show="largeur < 1200 && largeur >= 768" class="hauteur-fixe-pub col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="text-center" ng-controller="pubsCtrl">
+                                    <a href="{{pubs[9].clic}}" target="_blank">
+                                        <img ng-src="{{pubs[9].fichier}}" class="pub taille-pub">
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="pubArticles9" ng-if="$index==12" ng-show="largeur < 1200 && largeur >= 768" class="hauteur-fixe-pub col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="text-center" ng-controller="pubsCtrl">
+                                    <a href="{{pubs[6].clic}}" target="_blank">
+                                        <img ng-src="{{pubs[6].fichier}}" class="pub taille-pub">
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="pubArticles10" ng-if="$index==17" ng-show="largeur < 1200 && largeur >= 768" class="hauteur-fixe-pub col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="text-center" ng-controller="pubsCtrl">
+                                    <a href="{{pubs[8].clic}}" target="_blank">
+                                        <img ng-src="{{pubs[8].fichier}}" class="pub taille-pub">
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="pubArticles11" ng-if="$index==22" ng-show="largeur < 1200 && largeur >= 768" class="hauteur-fixe-pub col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="text-center" ng-controller="pubsCtrl">
+                                    <a href="{{pubs[6].clic}}" target="_blank">
+                                        <img ng-src="{{pubs[6].fichier}}" class="pub taille-pub">
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="pubArticles12" ng-if="$index==27" ng-show="largeur < 1200 && largeur >= 768" class="hauteur-fixe-pub col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="text-center" ng-controller="pubsCtrl">
+                                    <a href="{{pubs[3].clic}}" target="_blank">
+                                        <img ng-src="{{pubs[3].fichier}}" class="pub taille-pub">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Div des pubs au milieu des articles en résolution >= 768px et < 1200px -->
+                    </div>
 			    </div>
 			</div> 
-		</div>
+
 		<!-- / DIV LISTE ARTICLES -->
 
-</div>
 
 
 	<!-- PAGINATION -->
@@ -412,6 +461,9 @@
                 <b>Page Précedente</b>
 			</a> 
         </span>
+        <div class="text-center">
+            <b><p class="text-black">Page {{pageCourante}}</p></b>
+        </div>
         <span ng-if="pageCourante < nb_page" class="pull-right">
     		<a href="" ng-click="filterPage(int_val(pageCourante)+1)" class="taille-texte">
                 <b>Page suivante</b>
@@ -419,9 +471,7 @@
             <i class="fa fa-hand-o-right fa-2x"></i>
         </span>
     </div>
-    <div class="text-center">
-		<b><p class="text-black">Page {{pageCourante}}</p></b>
-	</div>
+    
 	<!-- / PAGINATION -->
-
+</div>
 

@@ -154,7 +154,6 @@ app.controller('profilCtrl',  function ($scope, ArticleFactory, $log, $routePara
     }
     };
 
-
     $scope.pageSuivante = function(page, unArticle){
         if ($scope.int_val($scope.page) < $scope.comptePage(unArticle.TPage)){
             $location.path('/profil/'+($routeParams.id)+'/'+($scope.int_val($scope.page)+1));

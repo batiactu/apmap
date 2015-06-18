@@ -1,34 +1,34 @@
 <div ng-controller="identificationCtrl" class="inscription-media big-margin-top-inverse">
 	<carousel>
 	    <slide ng-repeat="connect in connexion" active="connect.active">
-	        <img class="brightness  big-margin-top" style="width:100%;height:100%;" ng-src="{{connect.image}}">
-	        <div class="carousel-caption">
+	        <img class="brightness" style="height:100%;" ng-src="{{connect.image}}">
+	        <div class="carousel-caption margin-bottom-inscription-media">
 	        		<form class="form-horizontal text-center form-inscription-media">
 	        			<!-- Prénom -->
 	        			<div class="form-group">
 	        				<div class="col-lg-12">
-	        					<label for="prenom">Prénom : </label>
+	        					<label for="prenom" class="hide-media">Prénom : </label>
 	        					<input type="text" class="form-control" id="prenom" placeholder="Prénom">
 	        		  		</div>
 	        			</div><br>
 	        			<!-- Nom -->
 	        			<div class="form-group little-neg-margin-top">
 	        				<div class="col-lg-12">
-	        					<label for="nom">Nom : </label>
+	        					<label for="nom" class="hide-media">Nom : </label>
 	        					<input type="text" class="form-control" id="nom" placeholder="Nom">
 	        		  		</div>
 	        			</div><br>
 	        			<!-- Adresse mail -->
 	        			<div class="form-group little-neg-margin-top">
 	        				<div class="col-lg-12">
-	        					<label for="mail">Adresse Mail : </label>
+	        					<label for="mail" class="hide-media">Adresse Mail : </label>
 	        					<input type="email" class="form-control" id="mail" placeholder="Email">
 	        		  		</div>
 	        			</div><br>
 	        			<!-- Mot de passe -->
 	        			<div class="form-group little-neg-margin-top">
 	        		  		<div class="col-lg-12">
-	        		  			<label for="mdp">Mot de passe : </label>
+	        		  			<label for="mdp" class="hide-media">Mot de passe : </label>
 	        		    		<input type="password" class="form-control" id="mdp" placeholder="Mot de passe">
 	        		    	</div>
 	        		    </div><br>

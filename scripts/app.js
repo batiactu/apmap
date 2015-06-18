@@ -15,7 +15,7 @@ app.config(function($routeProvider){
         .when('/profilPro', {templateUrl : 'views/profilPro.html', controller:'profilProCtrl'})
         .when('/profilPro/vueEnsemble', {templateUrl : 'views/profilPro.html', controller:'profilProCtrl'})
         .when('/profilPro/photoProjet', {templateUrl : 'views/profilPro.html', controller:'profilProCtrl'})
-        .when('/profilPro/secteurs', {templateUrl : 'views/secteurs.html', controller:'profilProCtrl'})
+        .when('/profilPro/servicesPro', {templateUrl : 'views/profilPro.html', controller:'profilProCtrl'})
         .otherwise({redirectTo : '/'});
         
     });

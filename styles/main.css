@@ -112,116 +112,6 @@
     margin: 5px 5px 0 0;
 }
 
-/* ------------------------- Média ----------------------------- */
-
-@media screen and (max-width: 766px)
-{
-.ellipsis-media {
-        overflow: hidden;
-        height: 100px;
-        line-height: 25px;
-        margin: 5px;}
-
-        .ellipsis-media:before {
-        content:"";
-        float: left;
-        width: 5px; height: 100px; }
-
-        .ellipsis-media > *:first-child {
-        float: right;
-        width: 100%;
-        margin-left: -5px; }        
-
-        .ellipsis-media:after {
-        content: "\02026";  
-
-        box-sizing: content-box;
-        -webkit-box-sizing: content-box;
-        -moz-box-sizing: content-box;
-
-        float: right;
-        position: relative;
-
-        top: -25px; left: 100%; 
-        width: 3em; margin-left: -3em;
-        padding-right: 5px;
-
-        text-align: right;
-
-        background: -webkit-gradient(linear, left top, right top,
-            from(rgba(255, 255, 255, 0)), to(#f5f5f5), color-stop(50%, #f5f5f5));
-        background: -moz-linear-gradient(to right, rgba(255, 255, 255, 0), #f5f5f5 50%, #f5f5f5);           
-        background: -o-linear-gradient(to right, rgba(255, 255, 255, 0), #f5f5f5 50%, #f5f5f5);
-        background: -ms-linear-gradient(to right, rgba(255, 255, 255, 0), #f5f5f5 50%, #f5f5f5);
-        background: linear-gradient(to right, rgba(255, 255, 255, 0), #f5f5f5 50%, #f5f5f5); 
-    }
-
-.taille-fixe-media{
-    height: 280px;
-}
-
-.taille-article-media{
-  height:330px;
-}
-
-.width-button-identification-media{
-    width:100px;
-}
-
-.text-identification-media{
-    font-size: 1.1em;
-}
-
-.small-margin-left-media{
-  margin-left: 35px;
-}
-
-.connexion-media{
-  width:100%;
-  height: 550px;
-}
-
-.inscription-media{
-  width:100%;
-  height: 750px;
-}
-
-.identification-media{
-  width:100%;
-  height: 550px;
-}
-
-.form-connexion-media{
-  margin-bottom: 100px;
-}
-
-.form-inscription-media{
-  margin-bottom: 70px;
-}
-
-.hide-media{
-  display: none;
-}
-
-.pull-right-media{
-  float: right
-}
-
-.little-margin-top-inverse-media{
-  margin-top: -31px
-}
-
-.taille-pro-media{
-  font-size:1em;
-}
-
-.hide2{
-  visibility: visible;
-}
-
-}
-
-/* ----------------------------------/ Media ---------------------------------------*/
 
 .toright{
     float:right;
@@ -477,6 +367,7 @@
         background-repeat: no-repeat;
         background-position: left top;
         z-index: 900000;
+        margin-bottom: 40px;
         }
 
 #toTopHover {
@@ -497,10 +388,6 @@
 
 /* / FLECHE HAUT */
 
-#searchButton{
-  margin-left: 0px;
-  margin-bottom: 0px;
-}
 
 /* /FLECHE HAUT */
 
@@ -513,13 +400,8 @@
   display: inline-block;
 }
 
-.taille-pub-haut{
-  width: 250px;
-  height: 200px;
-}
-
 .hauteur-fixe-pub{
-    height: 390px;
+    height: 370px;
 }
 
 .taille-pub{
@@ -531,11 +413,6 @@
 .tiny-margin-top{
     margin-top: 15px;
 }
-
-.little-margin-top{
-    margin-top: 60px;
-}
-
 
 .middle-margin-top{
     margin-top: 70px;
@@ -557,15 +434,6 @@
   margin-right: 20px;
 }
 
-.small-margin-top{
-  margin-top: 30px;
-}
-
-.big-margin-top2{
-  margin-top: 200px;
-}
-
-
 .small-margin-top2{
   margin-top: 43px;
 }
@@ -574,24 +442,17 @@
   margin-right: 10px;
 }
 
-.xs-margin-left{
-  margin-right: 15px;
-}
 
 .small-margin-left{
   margin-left: 35px;
 }
 
-.big-margin-left{
-  margin-left: 500px;
-}
-
-.margin-top-inverse{
-  margin-top: -19px;
-}
-
 .small-padding{
   padding: 10px 15px;
+}
+
+.margin-left-etoile{
+  margin-left:166px;
 }
 
 /* / Margin */
@@ -631,12 +492,6 @@
 
 .float-left{
   float:left;
-}
-
-.trait-droit{
-  border-right: 1px solid black;
-  padding-right: 5px;
-  margin-right: 120px;
 }
 
 .titre-profil-article{
@@ -807,14 +662,6 @@ a.sans-style:hover{
   color:#B5553A;
 }
 
-.width-height-max{
-  height: 100%;
-}
-
-.boutons-fixed{
-  position: fixed;
-}
-
 .taille-photos{
   height: 200px;
   width: 300px;
@@ -822,11 +669,6 @@ a.sans-style:hover{
 
 .titre-photos{
   text-transform:capitalize;
-}
-
-.border-photos{
-  border-bottom: thin solid #BABABA;
-  margin-bottom: 20px;
 }
 
 .fixed-bottom{
@@ -841,22 +683,10 @@ a.sans-style:hover{
 
 /* inscription, connexion, identification */
 
-.total-height{
-    height:100%;
-}
-
 .text-identification{
     font-size: 1.4em;
 }
 
-.without-margin-container-fluid{
-    margin-left: -15px;
-    margin-right: -15px;
-}
-
-.between-buttons{
-    margin-left:15px;
-}
 
 .blur{
     filter: blur(5px);
@@ -871,17 +701,11 @@ a.sans-style:hover{
 }
 
 .carousel-caption{
-    bottom: 150px;
+    bottom: 400px;
 }
 
 .big-margin-top-inverse{
     margin-top:-200px;
-}
-.navigation-margin-top{
-    margin-top: 45px;
-}
-.neg-navigation-margin-top{
-    margin-top: -85px;
 }
 
 /* Slider */
@@ -892,9 +716,6 @@ a.sans-style:hover{
     height: 100%;
 }
 
-.carousel-inner {
-    height: 100%;
-}
 
 .fill {
     width: 100%;
@@ -907,11 +728,11 @@ a.sans-style:hover{
 }
 
 .brightness{
-    filter: brightness(50%);
-    -webkit-filter: brightness(50%);
-    -moz-filter: brightness(50%);
-    -o-filter: brightness(50%);
-    -ms-filter: brightness(50%);
+    filter: brightness(70%);
+    -webkit-filter: brightness(70%);
+    -moz-filter: brightness(70%);
+    -o-filter: brightness(70%);
+    -ms-filter: brightness(70%);
 }
 
 .brightness-inverse
@@ -964,15 +785,14 @@ body{
   background-color: #E4E4E4;
 }
 
-.sansDeco{
-  text-decoration: none;
-}
-
 .highlight{
   background-color: white;
   border: 1px solid #d6d6d6;
   height:40px;
+  width: 300px;
   overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .texte-VE{
@@ -983,6 +803,19 @@ body{
   vertical-align:middle;
   display:inline-block;
   line-height:normal; /* on rétablit le line-height */
+}
+
+.taille-div-description{
+  width:800px;
+  height:130px;
+}
+
+.img-trouverPro{
+  width:400px;
+  height:182px;
+  margin-top:7px;
+  float:left;
+  margin-right: 10px;
 }
 
 /* -------------------------------------------------------*/
@@ -1033,7 +866,7 @@ body{
     border-top: 2px solid #2C2C2B !important;
     border-bottom: 2px solid #2C2C2B !important;
     vertical-align: central;
-    height: 65px;
+    height: 60px;
 }
 
 .step .activestep p {
@@ -1050,7 +883,52 @@ body{
 }
 
 .telEtWeb{
-    width: 194px;
+    width: 199px;
+}
+
+.margin-pagePro{
+  margin-right:20px;
+  margin-top:40px;
+}
+
+.bandeauProfilPro{
+  background-image:url('http://www.cafeduweb.com/images/bandeaux/www/487379_79798671.jpg');
+  width:100%;
+  height:250px;
+  background-repeat:no-repeat;
+  margin-top:-40px
+}
+
+.logoProfilPro{
+  width:139px;
+  height:139px;
+  margin-left:15px;
+}
+
+.entrepriseProfilPro{
+  margin-top:-135px;
+  margin-left:165px;
+}
+
+.margin-nb-avis{
+  margin-top:-23px;
+  margin-left:250px;
+}
+
+.bouton-contactezmoi{
+  margin-left:990px;
+  margin-top:-110px;
+}
+
+.margin-bouton-retourListePro{
+  margin-top:65px;
+  margin-bottom:50px;
+}
+
+.margin-menu-profilPro{
+  margin-top:-27px;
+  margin-bottom: 30px;
+  margin-left:190px;
 }
 
 /*-------------------------------- Barre de menu profil Pro ------------------------- */
@@ -1061,3 +939,673 @@ body{
 footer {
     padding: 10px 0;
 }
+
+
+/* ------------------------- Média ----------------------------- */
+
+@media screen and (max-width: 766px)
+{
+.ellipsis-media {
+        overflow: hidden;
+        height: 100px;
+        line-height: 25px;
+        margin: 5px;}
+
+        .ellipsis-media:before {
+        content:"";
+        float: left;
+        width: 5px; height: 100px; }
+
+        .ellipsis-media > *:first-child {
+        float: right;
+        width: 100%;
+        margin-left: -5px; }        
+
+        .ellipsis-media:after {
+        content: "\02026";  
+
+        box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+
+        float: right;
+        position: relative;
+
+        top: -25px; left: 100%; 
+        width: 3em; margin-left: -3em;
+        padding-right: 5px;
+
+        text-align: right;
+
+        background: -webkit-gradient(linear, left top, right top,
+            from(rgba(255, 255, 255, 0)), to(#f5f5f5), color-stop(50%, #f5f5f5));
+        background: -moz-linear-gradient(to right, rgba(255, 255, 255, 0), #f5f5f5 50%, #f5f5f5);           
+        background: -o-linear-gradient(to right, rgba(255, 255, 255, 0), #f5f5f5 50%, #f5f5f5);
+        background: -ms-linear-gradient(to right, rgba(255, 255, 255, 0), #f5f5f5 50%, #f5f5f5);
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), #f5f5f5 50%, #f5f5f5); 
+    }
+
+.taille-fixe-media{
+    height: 280px;
+}
+
+.taille-article-media{
+  height:330px;
+}
+
+.taille-photo-media{
+  height:250px;
+}
+
+.width-button-identification-media{
+    width:100px;
+}
+
+.text-identification-media{
+    font-size: 1.1em;
+}
+
+.connexion-media{
+  width:100%;
+  height: 550px;
+}
+
+.inscription-media{
+  width:100%;
+  height: 750px;
+}
+
+.identification-media{
+  width:100%;
+  height: 550px;
+}
+
+.form-connexion-media{
+  margin-bottom: 100px;
+}
+
+.form-inscription-media{
+  margin-bottom: 70px;
+}
+
+.hide-media{
+  display: none;
+}
+
+.taille-media{
+  width: 75px;
+}
+
+.margin-bouton-retourListePro{
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.margin-pagePro{
+  margin-right:40px;
+  margin-top: -5px;
+  width: 10px;
+  height: 10px;
+}
+
+.margin-nb-avis{
+  margin-top:5px;
+  margin-left:10px;
+  font-size: 1em;
+}
+
+.step .activestep {
+    color: #B5553A;
+    margin-top: -3px;
+    padding-top: 1px;
+    border-left: 5px solid #2C2C2B !important;
+    border-right: 5px solid #2C2C2B !important;
+    border-top: 2px solid #2C2C2B !important;
+    border-bottom: 2px solid #2C2C2B !important;
+    vertical-align: middle;
+    height: 40px;
+}
+
+.bandeauProfilPro{
+  background-image:url('http://www.cafeduweb.com/images/bandeaux/www/487379_79798671.jpg');
+  width:100%;
+  height:180px;
+  background-repeat:no-repeat;
+  margin-top:-100px
+}
+
+.bouton-contactezmoi{
+  margin-left: 15px;
+  margin-top: 0px;
+  padding : 8px 5px;
+  font-size : 12px;
+}
+
+.logoProfilPro{
+  width:100px;
+  height:100px;
+  margin-left:15px;
+  padding :10px 0 0 0;
+}
+
+.entrepriseProfilPro{
+  margin-top:-40px;
+  margin-left:125px;
+  font-size:1.6em;
+}
+
+.margin-left-etoile{
+  margin-left: 160px;
+}
+
+.taille-div-description{
+  width:auto;
+  height:auto;
+}
+
+.adresse-profilPro-media{
+  margin-top: -420px;
+  float:left;
+  width:250px;
+}
+
+.adresse-profilPro-media2{
+  margin-top: -330px;
+  float:left;
+  width:250px;
+}
+
+.small-margin-right{
+  margin-right: 0px;
+}
+
+.titrePhotoProjet{
+  margin-top: -150px;
+  width: 150px;
+  height: 110px;
+  font-size: 1.7em;
+}
+
+.taille-div-photoProjet{
+  height:250px;
+}
+
+.margin-bottom-inscription-media{
+  margin-bottom: -280px;
+}
+
+.margin-bottom-connexion-media{
+  margin-bottom: -100px;
+}
+
+
+.margin-left-menuProfilPro-media{
+  float: right;
+  margin-right: 20px;
+}
+
+.carousel-caption{
+    bottom: 650px;
+}
+
+.img-trouverPro{
+  height: auto;
+  width: auto;
+  margin-top:7px;
+  float:left;
+  margin-right: 10px;
+}
+
+.telEtWeb{
+    width: 70px;
+}
+
+.logoMAP{
+  margin-left: 10px;
+}
+
+}
+
+
+/* ----------------------------------/ Media ---------------------------------------*/
+
+
+/* ------------------------- Média Tablette----------------------------- */
+
+@media screen and (min-device-width: 766px) and (max-device-width: 992px)
+{
+.ellipsis-media {
+        overflow: hidden;
+        height: 100px;
+        line-height: 25px;
+        margin: 5px;}
+
+        .ellipsis-media:before {
+        content:"";
+        float: left;
+        width: 5px; height: 100px; }
+
+        .ellipsis-media > *:first-child {
+        float: right;
+        width: 100%;
+        margin-left: -5px; }        
+
+        .ellipsis-media:after {
+        content: "\02026";  
+
+        box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+
+        float: right;
+        position: relative;
+
+        top: -25px; left: 100%; 
+        width: 3em; margin-left: -3em;
+        padding-right: 5px;
+
+        text-align: right;
+
+        background: -webkit-gradient(linear, left top, right top,
+            from(rgba(255, 255, 255, 0)), to(#f5f5f5), color-stop(50%, #f5f5f5));
+        background: -moz-linear-gradient(to right, rgba(255, 255, 255, 0), #f5f5f5 50%, #f5f5f5);           
+        background: -o-linear-gradient(to right, rgba(255, 255, 255, 0), #f5f5f5 50%, #f5f5f5);
+        background: -ms-linear-gradient(to right, rgba(255, 255, 255, 0), #f5f5f5 50%, #f5f5f5);
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), #f5f5f5 50%, #f5f5f5); 
+    }
+
+.taille-fixe-media{
+    height: 280px;
+}
+
+.taille-article-media{
+  height:330px;
+}
+
+.width-button-identification-media{
+    width:100px;
+}
+
+.text-identification-media{
+    font-size: 1.1em;
+}
+
+.connexion-media{
+  width:100%;
+  height: 550px;
+}
+
+.inscription-media{
+  width:100%;
+  height: 750px;
+}
+
+.identification-media{
+  width:100%;
+  height: 550px;
+}
+
+.form-connexion-media{
+  margin-bottom: 100px;
+}
+
+.form-inscription-media{
+  margin-bottom: 70px;
+}
+
+.hide-media{
+  display: none;
+}
+
+.taille-media{
+  width: 250px;
+}
+
+.margin-bouton-retourListePro{
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.margin-pagePro{
+  margin-right:20px;
+  margin-top: -5px;
+}
+
+.margin-nb-avis{
+  margin-top:15px;
+  margin-left:140px;
+  font-size: 1.2em;
+}
+
+.step .activestep {
+    color: #B5553A;
+    margin-top: -3px;
+    padding-top: 3px;
+    border-left: 5px solid #2C2C2B !important;
+    border-right: 5px solid #2C2C2B !important;
+    border-top: 2px solid #2C2C2B !important;
+    border-bottom: 2px solid #2C2C2B !important;
+    vertical-align: middle;
+    height: 40px;
+}
+
+.bandeauProfilPro{
+  background-image:url('http://www.cafeduweb.com/images/bandeaux/www/487379_79798671.jpg');
+  width:100%;
+  height:180px;
+  background-repeat:no-repeat;
+  margin-top:-100px
+}
+
+.bouton-contactezmoi{
+  margin-left:608px;
+  margin-top:-5px;
+  padding : 8px 5px;
+  font-size : 15px;
+}
+
+.logoProfilPro{
+  width:100px;
+  height:100px;
+  margin-left:15px;
+  padding :10px 0 0 0;
+}
+
+.entrepriseProfilPro{
+  margin-top:-70px;
+  margin-left:135px;
+}
+
+.margin-left-etoile{
+  margin-left: 140px;
+}
+
+.margin-left-menuProfilPro-media{
+  float: right;
+  margin-right: 230px;
+}
+
+.taille-div-description{
+  width:auto;
+  height:auto;
+}
+
+.adresse-profilPro-media{
+  margin-top: -300px;
+  margin-left: 200px;
+  width:250px;
+  float:left;
+}
+
+.adresse-profilPro-media2{
+  margin-top: -330px;
+  float:left;
+  width:250px;
+}
+
+.small-margin-right{
+  margin-right: 0px;
+}
+
+.titrePhotoProjet{
+  margin-top: -195px;
+  width: 220px;
+  margin-left: 200px;
+}
+
+.taille-div-photoProjet{
+  height:250px;
+}
+
+.margin-bottom-inscription-media{
+  margin-bottom: -280px;
+}
+
+.margin-bottom-connexion-media{
+  margin-bottom: -100px;
+}
+
+.margin-top-photoProjet{
+  margin-top: 30px;
+}
+
+.carousel-caption{
+    bottom: 650px;
+}
+
+.telEtWeb{
+    width: 200px;
+}
+
+}
+
+
+/* ----------------------------------/ Media tablette ---------------------------------------*/
+
+/* ------------------------- Média grande Tablette----------------------------- */
+
+@media screen and (min-device-width: 992px) and (max-device-width: 1200px)
+{
+.ellipsis-media {
+        overflow: hidden;
+        height: 100px;
+        line-height: 25px;
+        margin: 5px;}
+
+        .ellipsis-media:before {
+        content:"";
+        float: left;
+        width: 5px; height: 100px; }
+
+        .ellipsis-media > *:first-child {
+        float: right;
+        width: 100%;
+        margin-left: -5px; }        
+
+        .ellipsis-media:after {
+        content: "\02026";  
+
+        box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+
+        float: right;
+        position: relative;
+
+        top: -25px; left: 100%; 
+        width: 3em; margin-left: -3em;
+        padding-right: 5px;
+
+        text-align: right;
+
+        background: -webkit-gradient(linear, left top, right top,
+            from(rgba(255, 255, 255, 0)), to(#f5f5f5), color-stop(50%, #f5f5f5));
+        background: -moz-linear-gradient(to right, rgba(255, 255, 255, 0), #f5f5f5 50%, #f5f5f5);           
+        background: -o-linear-gradient(to right, rgba(255, 255, 255, 0), #f5f5f5 50%, #f5f5f5);
+        background: -ms-linear-gradient(to right, rgba(255, 255, 255, 0), #f5f5f5 50%, #f5f5f5);
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), #f5f5f5 50%, #f5f5f5); 
+    }
+
+.taille-fixe-media{
+    height: 280px;
+}
+
+.taille-article-media{
+  height:330px;
+}
+
+.width-button-identification-media{
+    width:100px;
+}
+
+.text-identification-media{
+    font-size: 1.1em;
+}
+
+.connexion-media{
+  width:100%;
+  height: 550px;
+}
+
+.inscription-media{
+  width:100%;
+  height: 750px;
+}
+
+.identification-media{
+  width:100%;
+  height: 550px;
+}
+
+.form-connexion-media{
+  margin-bottom: 100px;
+}
+
+.form-inscription-media{
+  margin-bottom: 70px;
+}
+
+.hide-media{
+  display: none;
+}
+
+.taille-media{
+  width: 250px;
+}
+
+.margin-bouton-retourListePro{
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.margin-pagePro{
+  margin-right:20px;
+  margin-top: -5px;
+}
+
+.margin-nb-avis{
+  margin-top:15px;
+  margin-left:140px;
+  font-size: 1.2em;
+}
+
+.step .activestep {
+    color: #B5553A;
+    margin-top: -3px;
+    padding-top: 3px;
+    border-left: 5px solid #2C2C2B !important;
+    border-right: 5px solid #2C2C2B !important;
+    border-top: 2px solid #2C2C2B !important;
+    border-bottom: 2px solid #2C2C2B !important;
+    vertical-align: middle;
+    height: 40px;
+}
+
+.bandeauProfilPro{
+  background-image:url('http://www.cafeduweb.com/images/bandeaux/www/487379_79798671.jpg');
+  width:100%;
+  height:180px;
+  background-repeat:no-repeat;
+  margin-top:-100px
+}
+
+.bouton-contactezmoi{
+  margin-left:827px;
+  margin-top:-5px;
+  padding : 8px 5px;
+  font-size : 15px;
+}
+
+.logoProfilPro{
+  width:100px;
+  height:100px;
+  margin-left:15px;
+  padding :10px 0 0 0;
+}
+
+.entrepriseProfilPro{
+  margin-top:-70px;
+  margin-left:135px;
+}
+
+.margin-left-etoile{
+  margin-left: 140px;
+}
+
+.margin-left-menuProfilPro-media{
+  float: right;
+  margin-right: 230px;
+}
+
+.taille-div-description{
+  width:auto;
+  height:auto;
+}
+
+.adresse-profilPro-media{
+  margin-top: -300px;
+  margin-left: 200px;
+  width:250px;
+  float:left;
+}
+
+.adresse-profilPro-media2{
+  margin-top: 0px;
+  float:left;
+  width:250px;
+}
+
+.secteurs-perimetre{
+  margin-top: -20px;
+}
+
+.small-margin-right{
+  margin-right: 0px;
+}
+
+.titrePhotoProjet{
+  margin-top: -50px;
+  width: 220px;
+  margin-left: 200px;
+}
+
+.taille-div-photoProjet{
+  height:250px;
+}
+
+.margin-bottom-inscription-media{
+  margin-bottom: -280px;
+}
+
+.margin-bottom-connexion-media{
+  margin-bottom: -100px;
+}
+
+.margin-top-photoProjet{
+  margin-top: 30px;
+}
+
+.carousel-caption{
+    bottom: 650px;
+}
+
+.telEtWeb{
+    width: 155px;
+}
+
+.margin-menu-profilPro{
+  margin-top:-27px;
+  margin-bottom: 50px;
+  margin-left:210px;
+}
+
+.titrePhotoProjet{
+  margin-top: -50px;
+  width: auto;
+  margin-left: 200px;
+}
+
+}
+
+
+/* ----------------------------------/ Media grande tablette ---------------------------------------*/

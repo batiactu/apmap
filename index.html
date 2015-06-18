@@ -30,6 +30,7 @@
         <script src="scripts/controleurs/identification.js"></script>
         <script src="scripts/controleurs/photos.js"></script>
         <script src="scripts/controleurs/profilPro.js"></script>
+        <script src="scripts/directives/resizable.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-sanitize.js">
         </script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch.js">
@@ -53,9 +54,9 @@
         </script>
         <script type="text/javascript" src="scripts/vendor/ui-bootstrap-tpls-0.13.0.min.js">
         </script>
-        <link rel="stylesheet" type="text/css" href="https://www.shieldui.com/shared/components/latest/css/shieldui-all.min.css" />
+        <!--<link rel="stylesheet" type="text/css" href="https://www.shieldui.com/shared/components/latest/css/shieldui-all.min.css" />
         <link rel="stylesheet" type="text/css" href="https://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
-        <script type="text/javascript" src="https://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+        <script type="text/javascript" src="https://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>-->
         <script type="text/javascript">
         //<![CDATA[
         $.noConflict();
@@ -110,7 +111,7 @@
                 <div class="container">
                     <div class="navbar-header">
                         <a href="#/">
-                        <img ng-src="logo-MAP.jpg" alt="Maison à Part" class="small-margin-left-media">
+                            <img ng-src="logo-MAP.jpg" alt="Maison à Part" class="logoMAP">
                         </a>
                         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
                             <span class="icon-bar"></span>
@@ -148,7 +149,7 @@
 
 
             <!-- Barre boutons haut blanche-->
-            <div class="btn-group btn-group-justified small-margin-top2"
+            <div ng-controller="articlesCtrl" class="btn-group btn-group-justified small-margin-top2"
             ng-show="$location.path()!='/identification' && $location.path()!='/inscription' && $location.path()!='/connexion'">
                 <a href="#" class="btn couleur-blanche">
                     <i class="fa fa-th-list fa-2x text-brown"></i>
@@ -164,7 +165,7 @@
 
 
             <!-- Navigation -->
-            <div ng-controller="articlesCtrl" class="small-margin-top2">
+            <div ng-controller="articlesCtrl">
                 <div ng-show="$location.path()=='/' || $location.path()=='/actualites' || $location.path()=='/realisations'">
                     <span id="menu-toggle" class="btn btn-dark toggle" style="margin-top:100px;"><i class="fa fa-filter"></i></span>
                     <nav id="sidebar-wrapper">
@@ -303,9 +304,9 @@
 
             <!-- / Div du loader -->
 
-
-        <div ng-view></div>
         </div>
+        <div ng-view></div>
+
         
 
         <div class="container">
@@ -328,7 +329,7 @@
                     </div>
                 </div>
 
-                <!-- Barre boutons bas blanche-->
+                <!-- Barre boutons bas noire-->
                 <div class="btn-group btn-group-justified fixed-bottom"
                 ng-show="$location.path()!='/identification' && $location.path()!='/inscription' && $location.path()!='/connexion'">
                     <a href="#" class="btn couleur-noire">

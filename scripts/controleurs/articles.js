@@ -9,7 +9,8 @@ app.controller('articlesCtrl', function ($scope, $log, $location, ArticleFactory
     $scope.type_travaux = false;
     $scope.rubriques = false;
     $scope.Math = window.Math;
-
+    $scope.largeur = window.innerWidth;
+    console.log(window.innerWidth);
 
 
     /* Pour changer l'entity_type en fonction du mot-clé passé en URL */
@@ -107,7 +108,7 @@ app.controller('articlesCtrl', function ($scope, $log, $location, ArticleFactory
         });
     }
 
-    //Fonction qui retourne tous les articles par thème (passé en paramètre)
+    //Fonction qui retourne tous les articles par rubrique (passé en paramètre)
     $scope.sortByRubrique = function(rubrique){
         //Si on filtre par rubrique, cela supprime tous les autres filtres
         angular.forEach($scope.filter, function(value, index){
@@ -210,6 +211,8 @@ app.controller('articlesCtrl', function ($scope, $log, $location, ArticleFactory
         $scope.filter.entity_type=unEntity;
     }
 
+
+    
 
 
     // Retourne les thèmes
