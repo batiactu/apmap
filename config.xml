@@ -5,7 +5,7 @@
         versionCode = "1"
         version     = "1.0.0">
  
-    <name>Angular Solarium</name>
+    <name>Maison A Part</name>
      
     <description>
         Affichage des articles retournés par Solarium. Framework AngularJS
@@ -38,6 +38,8 @@
     <preference name="android-minSdkVersion"      value="7" />             <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 
+
+    <icon src="images/logo-MAP.jpg"  />
 
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
     <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
